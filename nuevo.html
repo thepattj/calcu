@@ -1,0 +1,36 @@
+<html>    
+    <head>
+       <title>Calculadora</title>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width">
+       <link href="estilo.css" rel="stylesheet" type="text/css">
+       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">          
+    </head>
+    
+    
+    
+    <body> 
+       <div class="contenido">
+           <div class="arriba">
+             <button onclick="guardar()"><img src="guardar.png" id="nue"></button>
+              <button onclick="regresar2()"><img src="regreso.png" id="regresar"></button>
+            </div>       
+            <div class="cuerpo">
+                  <textarea placeholder="Escribe tu nota" id="acordeon"></textarea>
+            </div>
+       </div>
+    </body>    
+       
+    <script>
+        function guardar(){
+            acordeon = document.getElementById('acordeon').value;
+            localStorage.setItem('acordeon',acordeon);
+            window.location.assign('index.html');  
+        }
+        
+        function regresar2(){
+            window.location.assign('index.html');  
+        }
+    </script>
+        
+</html>

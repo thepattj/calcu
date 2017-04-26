@@ -1,0 +1,167 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*INPUT*/
+.ecuacion{
+    width: 100%;
+    height: 25%;
+    background: black;
+}
+.inc{
+    width: 100%;
+    height: 50%;
+    font-size: 6em;
+    text-align: right;
+    background: black;
+    color: white;
+    border: none;
+}
+.eq{
+    width: 100%;
+    height: 50%;
+    font-size: 1.5em;
+    text-align: right;
+    background: black;
+    color: white;
+    border: none;
+}
+
+/*ZONA DE TECLAS*/
+.teclas{
+    width: 100%;
+    height: 75%;    
+}
+
+/*BARRA GRIS*/
+.otro{
+    width: 100%;
+    height: 16.6%;
+    background: #666666;
+    color: white;
+    font-size: 3em;
+    float: left;
+    position: relative;
+}
+#minus, #pari, #pard, #especial{
+    width: 25%;
+    height: 100%;    
+    float: left;
+    text-align: center;
+}
+
+/*BARRA NUMEROS*/
+.numeros{
+    width: 75%;
+    height: 83.4%;
+    background: white;
+    color: black;
+    font-size: 3em;
+    float: left;
+    position: relative;
+}
+#siete, #ocho, #nueve, #cuatro, #cinco, #seis, #uno, #dos, #tres, #cero, #punto, #porcentaje{
+    width: 33.3%;
+    height: 20%;
+    float: left;
+    text-align: center;
+    /*margin-top: 2px;*/
+    /*border-style: solid;
+    border-color: black;
+    border:15px;*/
+}
+#borrar{
+    width: 33.3%;
+    height: 20%;
+    float: left;
+    text-align: center;
+    background: red;
+    
+}
+#igual{
+    width: 66.6%;
+    height: 20%;
+    float: left;
+    text-align: center;    
+    background: #FF9933;
+}
+
+/*BARRA ARITMETICA*/
+.funcion{
+    width: 25%;
+    height: 83.4%;
+    background: #3366FF;
+    float: left;
+    color: black;
+    font-size: 3em;
+    position: relative;
+    text-align: center;
+}
+#division,#multi,#resta{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+#suma{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+}
+
+
+/*NUEVO*/
+.contenido{
+    width: 100%;
+    height: 75%;
+    background: #CCCCCC;
+}
+/*BARRA ARRIBA*/
+.arriba{
+    width: 100%;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    background: #27ae60;
+    background-color: rgba(0,0,0,.1)
+}
+
+.arriba button{
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    margin-right: 7px;
+    background: rgba(255,255,255,.5);
+    /*opacity: .5;*/
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#regresar{
+    max-height: 30px;
+    margin-top: 0px;
+    margin-right: 5px;
+}
+
+#nue{
+    max-height: 45px;    
+}
+/*CUERPO*/
+.cuerpo{
+    float: right;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+
+.cuerpo>textarea{
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    font-size: 1em;
+    resize: none;
+}

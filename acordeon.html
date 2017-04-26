@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="estilo.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    
+     <script>
+        function cargarAcordeon(){
+            acordeon = localStorage.getItem('acordeon');
+            document.getElementById('acordeon').innerHTML = acordeon;
+        }
+         
+        window.addEventListener('load',cargarAcordeon,true);
+         
+        function regresar2(){
+            window.location.assign('index.html');  
+        }
+     </script>
+        
+    <body>
+      <div class="contenido">
+           <div class="arriba">
+              <button onclick="regresar2()"><img src="regreso.png" id="regresar"></button>
+            </div>       
+            <div class="cuerpo">
+                  <p id="acordeon"></p>
+            </div>
+       </div>  
+    </body>
+</html>

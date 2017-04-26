@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Calculadora</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="estilo.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<nav></nav>
+<body>
+    <div class="ecuacion">
+        <input id="formula" class="eq" placeholder="DEG" disabled> 
+        <input id="digito" class="inc" placeholder="0" disabled> 
+    </div>
+    <div class="teclas">
+      <div class="otro">
+          <div id="minus" onclick="agregarnumero('-')";> ± </div>
+          <div id="pari" onclick="agregarnumero('(')";> ( </div>
+          <div id="pard" onclick="agregarnumero(')')";> ) </div>
+          <div id="especial" onclick="nota()";> ★ </div>
+      </div>
+      <div class="numeros">
+          <div id="siete" onclick="agregarnumero(7)";> 7 </div>
+          <div id="ocho" onclick="agregarnumero(8)";> 8 </div>
+          <div id="nueve" onclick="agregarnumero(9)";> 9 </div>
+          <div id="cuatro" onclick="agregarnumero(4)";> 4 </div>
+          <div id="cinco" onclick="agregarnumero(5)";> 5 </div>
+          <div id="seis" onclick="agregarnumero(6)";> 6 </div>
+          <div id="uno" onclick="agregarnumero(1)";> 1 </div>
+          <div id="dos" onclick="agregarnumero(2)";> 2 </div>
+          <div id="tres" onclick="agregarnumero(3)";> 3 </div>
+          <div id="cero" onclick="agregarnumero(0)";> 0 </div>
+          <div id="punto" onclick="agregarnumero('.')";> . </div>
+          <div id="porcentaje" onclick="agregarnumero('%')";> % </div>
+          <div id="borrar" onclick="borrar()";> C </div>
+          <div id="igual" onclick="igual()";> = </div>
+      </div>
+      <div class="funcion">
+          <div id="division" onclick="agregarnumero('/')";> / </div>      
+          <div id="multi" onclick="agregarnumero('*')";> x </div>       
+          <div id="resta" onclick="agregarnumero('-')";> - </div>        
+          <div id="suma" onclick="agregarnumero('+')";> + </div>
+      </div>
+       
+    </div>
+</body>
+<script>
+    function agregarnumero(numero){
+        document.getElementById('digito').value+=numero;
+    }
+    function nota(){
+        valor = document.getElementById('digito').value;
+        if(valor == "0004"){
+            window.location.assign('nuevo.html');   
+        }
+        if(valor=="0009"){
+            window.location.assign('acordeon.html');  
+        }
+    }
+    function borrar(){
+        document.getElementById('digito').value ="";
+        document.getElementById('formula').value = "";
+    }
+    function igual(){
+        cadena = document.getElementById('digito').value;
+        resultado = eval(cadena);
+        document.getElementById('digito').value = resultado;
+        document.getElementById('formula').value = cadena;
+    }
+    
+</script>
